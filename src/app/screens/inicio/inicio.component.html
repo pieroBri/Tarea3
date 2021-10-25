@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row mt-5"> <!--Una row tiene 12 cols-->
+      <div class="col-md-4 col-sm-12 text-center" *ngFor="let item of noticias">
+        <app-carta-noticia [noticiasCarta]="item">
+          
+        </app-carta-noticia>
+    </div>
+    </div>
+    <div class="row mt-5"> <!--Una row tiene 12 cols-->
+      <div class="col-md-3 col-sm-6 text-center" *ngFor="let item of noticiasOtras">
+        <app-carta-noticia [noticiasCarta]="item">
+          
+        </app-carta-noticia>
+      </div>
+    </div>
+</div>
+
+<h5 id="noticiasValparaiso">Noticias - Valparaíso</h5>
+
+<app-footer></app-footer>
+

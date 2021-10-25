@@ -1,0 +1,32 @@
+nav{
+    height: 60px;
+}
+
+#imagen{
+    padding: 0%;
+}
+
+#colBosque{
+    //border-style: solid;
+    //border-color: rebeccapurple;
+    //border-width: 3px;
+    height: 200px;
+    width: 100%;
+}
+
+#imagenBosque{
+    background-size: 100%;
+}
+
+.nav-item{
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+
+    margin-left: 1%;
+}
+
+
+.nav-item a{
+    color: white;
+}

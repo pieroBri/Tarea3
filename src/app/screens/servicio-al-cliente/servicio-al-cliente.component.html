@@ -1,0 +1,97 @@
+<div class="container" id="containerFormulario">
+  <div class="row" id="rowFormulario">
+    <div class="col-md-6 offset-md-3  col-sm-5" id="colFormulario" *ngIf="!formularioValido">
+      <form [formGroup]="formulario" (ngSubmit)="validacion()" novalidate> <!--novalidate ua que se estan haciendo con angular-->
+        <div>
+            <label for="nombre" class="form-label">Nombre</label>
+            <input id="nombre" class="form-control" type="text" formControlName="nombre">
+            <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger"> <!--control se refiere a los controles de cada input-->
+              <!--dirty indica que el ususario modifico el valor, touch indica que lo toco pero no modifico-->
+              <div *ngIf="formulario.controls['nombre'].hasError('required')"> <!--hasError determina el tipo de error-->
+                Nombre requerido
+              </div>
+              <div *ngIf="formulario.controls['nombre'].hasError('maxlength')"> <!--hasError determina el tipo de error-->
+                <!--maxlength se debe escribir con minuscula-->
+                maximo de caracteres 30
+              </div>
+              <div *ngIf="formulario.controls['nombre'].hasError('minlength')"> <!--hasError determina el tipo de error-->
+                Numero minimo de caracteres para su nombre es de 3
+              </div>
+            </div>
+        </div>
+        <div>
+            <label for="telefono" class="form-label">Telefono</label>
+            <input id="telefono" class="form-control" type="number" formControlName="telefono" placeholder="941439999">
+            <div *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)" class="alert alert-danger"> <!--control se refiere a los controles de cada input-->
+              <!--dirty indica que el ususario modifico el valor, touch indica que lo toco pero no modifico-->
+              <div *ngIf="formulario.controls['telefono'].hasError('required')"> <!--hasError determina el tipo de error-->
+                Numero requerido
+              </div>
+              <div *ngIf="formulario.controls['telefono'].hasError('max')"> <!--hasError determina el tipo de error-->
+                <!--maxlength se debe escribir con minuscula-->
+                Maximo de caracteres 9
+              </div>
+              <div *ngIf="formulario.controls['telefono'].hasError('min')"> <!--hasError determina el tipo de error-->
+                <!--maxlength se debe escribir con minuscula-->
+                Recuerde anteponer el numero 9
+              </div>
+            </div>
+        </div>
+        <div>
+            <label for="correoElectronico" class="form-label">Correo Electronico</label>
+            <input id="correoElectronico" class="form-control" type="email" formControlName="correoElectronico" placeholder="a@a">
+            <div *ngIf="formulario.controls['correoElectronico'].invalid && (formulario.controls['correoElectronico'].dirty || formulario.controls['correoElectronico'].touched)" class="alert alert-danger"> <!--control se refiere a los controles de cada input-->
+              <!--dirty indica que el ususario modifico el valor, touch indica que lo toco pero no modifico-->
+              <div *ngIf="formulario.controls['correoElectronico'].hasError('required')"> <!--hasError determina el tipo de error-->
+                Correo electronico requerido
+              </div>
+              <div *ngIf="formulario.controls['correoElectronico'].hasError('email')"> <!--hasError determina el tipo de error-->
+                Recuerde el formato a@a
+              </div>
+            </div>
+        </div>
+        <div>
+            <label for="dirigidoA">Dirigido a</label>
+            <select class="form-select" aria-label="Default select example" id="dirigidoA" formControlName="dirigidoA">
+              <option value="1">Contenido</option>
+              <option value="2">Publicidad</option>
+              <option value="3">Sugerencias</option> 
+              <option value="4">Suscripciones digitales</option> 
+            </select>
+            <div *ngIf="formulario.controls['dirigidoA'].invalid && (formulario.controls['dirigidoA'].dirty || formulario.controls['dirigidoA'].touched)" class="alert alert-danger"> <!--control se refiere a los controles de cada input-->
+              <!--dirty indica que el ususario modifico el valor, touch indica que lo toco pero no modifico-->
+              <div *ngIf="formulario.controls['dirigidoA'].hasError('required')"> <!--hasError determina el tipo de error-->
+                Elija una opcion
+              </div>
+              
+            </div>
+        </div>
+        <div>
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" formControlName="mensaje" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+          <div *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert alert-danger"> <!--control se refiere a los controles de cada input-->
+            <!--dirty indica que el ususario modifico el valor, touch indica que lo toco pero no modifico-->
+            <div *ngIf="formulario.controls['mensaje'].hasError('required')"> <!--hasError determina el tipo de error-->
+              Rellene el campo de texto
+            </div>
+            <div *ngIf="formulario.controls['mensaje'].hasError('minlength')"> <!--hasError determina el tipo de error-->
+              Numero minimo de caracteres para el mensaje 10
+            </div>
+            
+          </div>
+        </div>
+        <div>
+           <button class="btn btn-primary" type="submit" [disabled]="!formulario.valid" >Enviar Datos</button> <!--!Formulario.valid indica si el formulario esta correcto, viene incorrecto lo que con ! pasa a correcto-->
+           <button class="btn btn-primary" type="reset" [disabled]="!formulario.valid" >Limpiar formulario</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-6 offset-md-3  col-sm-5" id="colMensajeEnvioDatos" *ngIf="formularioValido">
+        <p>Gracias por tus datos</p>
+    </div>
+
+  </div>
+</div>
+
+

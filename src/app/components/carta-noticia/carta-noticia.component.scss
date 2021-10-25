@@ -1,0 +1,96 @@
+.card{
+    border-style: solid;
+    border-radius: 0;
+}
+
+
+.card-header.text-center img{
+    position: relative;
+    width:100%;
+    height:110%;
+}
+
+.card-body{
+    text-align: left;
+    display: block;
+    background-color: rgb(242, 242, 242);
+}
+
+.card-body small{
+    text-align: left;
+}
+
+.card-body button{
+    position: relative;
+    margin-top: 6%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    width: 35%;
+}
+
+.card-body.entretenimineto h5{
+    color: rgb(30, 138, 16);
+}
+
+.card-body.entretenimineto button{
+    background-color: rgb(30, 138, 16);
+    border-color: rgb(30, 138, 16);
+}
+
+.card-body.deporte h5{
+    color: rgb(94, 2, 2);
+}
+
+.card-body.deporte button{
+    background-color: rgb(94, 2, 2);
+    border-color: rgb(94, 2, 2);
+}
+
+.card-body.mundo h5{
+    color: rgb(2, 49, 169);
+}
+
+.card-body.mundo button{
+    background-color: rgb(2, 49, 169);
+    border-color: rgb(2, 49, 169);
+}
+
+.card-body.economia h5{
+    color: rgb(150, 2, 169);
+}
+
+.card-body.economia button{
+    background-color: rgb(150, 2, 169);
+    border-color: rgb(150, 2, 169);
+}
+
+.card-body.salud h5{
+    color: rgb(0, 27, 94);
+}
+
+.card-body.salud button{
+    background-color: rgb(0, 27, 94);
+    border-color: rgb(0, 27, 94);
+}
+
+.card-body.tecnologia h5{
+    color: rgb(209, 23, 10);
+}
+
+.card-body.tecnologia button{
+    background-color: rgb(209, 23, 10);
+    border-color: rgb(209, 23, 10);
+}
+
+.card-body.otras h5{
+    color: rgb(74, 74, 75);
+    text-align: center;
+}
+
+.card-body.otras button{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(74, 74, 75);
+    color: rgb(74, 74, 75);
+}
+

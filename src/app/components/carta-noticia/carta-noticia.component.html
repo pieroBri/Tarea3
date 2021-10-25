@@ -1,0 +1,87 @@
+<div class="card" *ngIf="noticiasCarta.categiora  != 'otras'">
+  
+    <img class = "card-img-top" width="60px" height="190vh" src="assets/{{noticiasCarta.imagen}}" alt="">
+
+    <div class="card-body entretenimineto" *ngIf="noticiasCarta.categiora  == 'entretenimineto' ">
+      
+      <h5 class="card-title">{{noticiasCarta.titulo}}</h5>
+      <small class="text-center base">{{noticiasCarta.contenidoBase}}</small>
+      <small class="text-center completo" hidden>{{noticiasCarta.contenidoCompleto}}</small>
+      <div>
+         <button href="#" type="button" class="btn btn-primary noticias"    (click)="verNoticiaCompleta(noticiasCarta.id);">Leer Más</button>
+      </div>
+     
+    </div>
+
+    <div class="card-body deporte" *ngIf="noticiasCarta.categiora  == 'deporte' " >
+      
+      <h5 class="card-title">{{noticiasCarta.titulo}}</h5>
+      <small class="text-center base">{{noticiasCarta.contenidoBase}}</small>
+      <small class="text-center completo" hidden>{{noticiasCarta.contenidoCompleto}}</small>
+      <div>
+        <button href="#" type="button" class="btn btn-primary noticias" (click)="verNoticiaCompleta(noticiasCarta.id);">Leer Más</button>
+      </div>
+      
+    </div>
+
+    <div class="card-body mundo" *ngIf="noticiasCarta.categiora  == 'mundo' " >
+     
+      <h5 class="card-title">{{noticiasCarta.titulo}}</h5>
+      <small class="text-center base">{{noticiasCarta.contenidoBase}}</small>
+      <small class="text-center completo" hidden>{{noticiasCarta.contenidoCompleto}}</small>
+      <div>
+        <button href="#" type="button" class="btn btn-primary noticias" (click)="verNoticiaCompleta(noticiasCarta.id);">Leer Más</button>
+      </div>
+      
+    </div>
+
+    <div class="card-body economia" *ngIf="noticiasCarta.categiora  == 'economia' " >
+      
+      <h5 class="card-title">{{noticiasCarta.titulo}}</h5>
+      <small class="text-center base">{{noticiasCarta.contenidoBase}}</small>
+      <small class="text-center completo" hidden>{{noticiasCarta.contenidoCompleto}}</small>
+      <div>
+        <button href="#" type="button" class="btn btn-primary noticias" (click)="verNoticiaCompleta(noticiasCarta.id);">Leer Más</button>
+      </div>
+      
+    </div>
+
+    <div class="card-body salud" *ngIf="noticiasCarta.categiora  == 'salud' ">
+     
+      <h5 class="card-title">{{noticiasCarta.titulo}}</h5>
+      <small class="text-center base">{{noticiasCarta.contenidoBase}}</small>
+      <small class="text-center completo" hidden>{{noticiasCarta.contenidoCompleto}}</small>
+      <div>
+        <button href="#" type="button" class="btn btn-primary noticias" (click)="verNoticiaCompleta(noticiasCarta.id);">Leer Más</button>
+      </div>
+      
+    </div>
+
+    <div class="card-body tecnologia" *ngIf="noticiasCarta.categiora  == 'tecnologia' " >
+      
+      <h5 class="card-title">{{noticiasCarta.titulo}}</h5>
+      <small class="text-center base">{{noticiasCarta.contenidoBase}}</small>
+      <small class="text-center completo" hidden>{{noticiasCarta.contenidoCompleto}}</small>
+      <div>
+        <button href="#" type="button" class="btn btn-primary noticias" (click)="verNoticiaCompleta(noticiasCarta.id);">Leer Más</button>
+      </div>
+      
+    </div>
+
+</div>
+
+<div class="card" *ngIf="noticiasCarta.categiora  == 'otras'">
+  
+  <img class = "card-img-top" width="60px" height="300vh" src="assets/{{noticiasCarta.imagen}}" alt="">
+
+  <div class="card-body otras" *ngIf="noticiasCarta.categiora  == 'otras' " >
+
+    <h5 class="card-title">{{noticiasCarta.titulo}}</h5>
+    <small class="text-center base">{{noticiasCarta.contenidoBase}}</small>
+    <small class="text-center completo" hidden>{{noticiasCarta.contenidoCompleto}}</small>
+    <div>
+      <button href="#" type="button" class="btn btn-primary noticias" (click)="verNoticiaCompleta(noticiasCarta.id);">Leer Más</button>
+    </div>
+    
+  </div>
+</div>
